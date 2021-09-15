@@ -14,32 +14,33 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <main>
-          <Switch>
-            <Route exact path="/">
-              <Login />
-            </Route>
-            <Route path="/search">
-              <Search />
-            </Route>
-            <Route path="/album/:id">
-              <Album />
-            </Route>
-            <Route path="/favorites">
-              <Favorites />
-            </Route>
-            <Route exact path="/profile">
-              <Header />
-              <Profile />
-            </Route>
-            <Route path="/profile/edit">
-              <ProfileEdit />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-        </main>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/search">
+            <Header />
+            <Search />
+          </Route>
+          <Route path="/album/:id">
+            <Album />
+          </Route>
+          <Route path="/favorites">
+            <Header />
+            <Favorites />
+          </Route>
+          <Route exact path="/profile">
+            <Header />
+            <Profile />
+          </Route>
+          <Route path="/profile/edit">
+            <Header />
+            <ProfileEdit />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
       </BrowserRouter>
     );
   }

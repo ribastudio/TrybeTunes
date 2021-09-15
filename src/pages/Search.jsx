@@ -5,6 +5,8 @@ class Search extends Component {
     return (
       <div data-testid="page-search">
         <h1>Search</h1>
+        <input />
+        <button type="button">Procurar</button>
       </div>
     );
   }
