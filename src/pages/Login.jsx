@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './Login.css';
 import { Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import TrybeLogo from '../assets/logo.png';
 import { createUser, getUser } from '../services/userAPI';
 import Loading from '../components/loading/Loading';
+import './Login.css';
 // Aprendendo a importar a imagem que não esteja no diretorio public do React https://daveceddia.com/react-image-tag/
 
 class Login extends Component {
@@ -84,8 +84,8 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
-  userCreated: PropTypes.object.isRequired,
-};
+// Login.propTypes = {
+//   inputUser: PropTypes.object.isRequired,
+// };
 
 export default Login;

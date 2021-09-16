@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Loading from '../components/loading/Loading';
+// import Loading from '../components/loading/Loading';
 
 class Search extends Component {
   constructor() {
