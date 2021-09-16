@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 import TrybeLogo from '../assets/logo.png';
-import { createUser, getUser } from '../services/userAPI';
+import { createUser } from '../services/userAPI';
 import Loading from '../components/loading/Loading';
 import './Login.css';
 // Aprendendo a importar a imagem que não esteja no diretorio public do React https://daveceddia.com/react-image-tag/
@@ -22,19 +22,16 @@ class Login extends Component {
   }
 
   handleChange({ target: { value } }) {
-    console.log(value);
     this.setState({
       inputUser: value,
     });
   }
 
   async createNewUser(user) {
-    await createUser({ name: user });
     this.setState({
       loading: true,
     });
-    const userCreated = await getUser(user);
-    localStorage.setItem('user', JSON.stringify(userCreated));
+    await createUser({ name: user });
 
     this.setState({
       loading: false,
