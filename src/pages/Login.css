@@ -1,10 +1,10 @@
-@import '../App.css';
+@import '../App.css' ;
 
 .section {
-  display: flex;
-  justify-content: center;
-  flex-basis: auto;
   align-items: center;
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
 }
 
 .column {
@@ -13,38 +13,37 @@
 
 .login_box {
   align-items: center;
-  margin: 0 auto;
-  background: rgba(18,18,18,1);
+  background: rgba(18, 18, 18, 1);
   border-radius: 15px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   height: 314px;
   justify-content: center;
+  margin: 0 auto;
   overflow: hidden;
   width: 70%;
 }
 
 .login_title {
+  color: rgb(51, 51, 51);
   display: block;
-  color: rgba(255,255,255,1);
-  font-family: Roboto;
+  font-family: Source Sans Pro , sans-serif;
   font-size: 28px;
-  font-weight: Medium;
 }
 
 img {
   align-self: center;
-  display:inline-flex;
+  display: inline-flex;
   width: 150px;
 }
 
 input {
-  display: block;
-  color: white;
-  font-size: 1.3em;
   background-color: rgb(51, 51, 51);
-  border-radius: 5px;
   border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 1.3em;
   padding: 10px;
 }
 
@@ -53,13 +52,13 @@ label {
 }
 
 .enter-btn {
-  display: block;
-  padding: 15px;
-  font-size: 20px;
-  color: white;
   background-color: rgb(155, 81, 224);
   border: none;
   border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 20px;
+  padding: 15px;
 }
 
 .enter-btn:hover {
