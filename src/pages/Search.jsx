@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loading from '../components/loading/Loading';
 
 class Search extends Component {
   constructor() {
@@ -18,6 +19,10 @@ class Search extends Component {
     });
   }
 
+  loadingArtistAlbum() {
+
+  }
+
   render() {
     const { inputUser } = this.state;
     const minUserInputLength = 2;
@@ -33,6 +38,7 @@ class Search extends Component {
           data-testid="search-artist-button"
           type="button"
           disabled={ inputUser.length < minUserInputLength }
+          // onClick={}
         >
           Procurar
         </button>

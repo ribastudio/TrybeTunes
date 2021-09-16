@@ -32,10 +32,14 @@ class Header extends Component {
   render() {
     const { userLogged, logged } = this.state;
     return (
-      <header>
+      <header data-testid="header-component">
         <p>Header</p>
         <section>
-          <span>{ logged ? userLogged : <Loading /> }</span>
+          <span
+            data-testid="header-user-name"
+          >
+            { logged ? userLogged : <Loading /> }
+          </span>
         </section>
         <nav>
           <Link to="/search" data-testid="link-to-search">Search</Link>
