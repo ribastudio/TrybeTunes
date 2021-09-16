@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import TrybeLogo from '../assets/logo.png';
 import { createUser, getUser } from '../services/userAPI';
-import Loading from '../components/Loading';
+import Loading from '../components/loading/Loading';
 // Aprendendo a importar a imagem que não esteja no diretorio public do React https://daveceddia.com/react-image-tag/
 
 class Login extends Component {
@@ -34,6 +34,8 @@ class Login extends Component {
       loading: true,
     });
     const userCreated = await getUser(user);
+    localStorage.setItem('user', JSON.stringify(userCreated));
+
     this.setState({
       loading: false,
       logged: true,
@@ -82,8 +84,8 @@ class Login extends Component {
   }
 }
 
-Login.PropTypes = {
-
+Login.propTypes = {
+  userCreated: PropTypes.object.isRequired,
 };
 
 export default Login;

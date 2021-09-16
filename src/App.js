@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 import Favorites from './pages/Favorites';
 import Search from './pages/Search';
 import ProfileEdit from './pages/ProfileEdit';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import './App.css';
 
 class App extends React.Component {
