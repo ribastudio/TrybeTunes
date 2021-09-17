@@ -1,0 +1,16 @@
+@import '../App.css';
+
+.search-body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.search-body > h1 {
+  margin-right: 20px;
+}
+
+button.search-btn {
+  margin-left: 20px;
+}

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-// import Loading from '../components/loading/Loading';
+import './Search.css';
+import searchAlbumsApi from '../services/searchAlbumsAPI';
 
 class Search extends Component {
   constructor() {
     super();
 
     this.handleChange = this.handleChange.bind(this);
+    this.loadingArtistAlbum = this.loadingArtistAlbum.bind(this);
 
     this.state = {
       inputUser: '',
@@ -19,15 +21,17 @@ class Search extends Component {
     });
   }
 
-  loadingArtistAlbum() {
-
+  async loadingArtistAlbum({ inputUser }) {
+    const album = await searchAlbumsApi(inputUser)
+      .then((albumSearch) => album.filter(albumSearch));
+    console.log(album);
   }
 
   render() {
     const { inputUser } = this.state;
     const minUserInputLength = 2;
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="search-body">
         <h1>Search</h1>
         <input
           onChange={ this.handleChange }
@@ -38,7 +42,7 @@ class Search extends Component {
           data-testid="search-artist-button"
           type="button"
           disabled={ inputUser.length < minUserInputLength }
-          // onClick={}
+          onClick={ this.loadingArtistAlbum }
         >
           Procurar
         </button>

@@ -53,7 +53,9 @@ class Login extends Component {
     const minUserInputLength = 3;
     return (
       <section className="section" data-testid="page-login">
-        <img src={ TrybeLogo } alt="TrybeTunes" />
+        <div>
+          <img src={ TrybeLogo } alt="TrybeTunes" />
+        </div>
         <div className="login_box">
           <h1 className="login_title">Insira seu usuário</h1>
           <label htmlFor="input-login">

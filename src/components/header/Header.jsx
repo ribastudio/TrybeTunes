@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../../services/userAPI';
 import Loading from '../loading/Loading';
+import TrybeLogo from '../../assets/logo.png';
 import './Header.css';
 
 class Header extends Component {
@@ -33,6 +34,7 @@ class Header extends Component {
     const { userLogged, logged } = this.state;
     return (
       <header data-testid="header-component">
+        <img src={ TrybeLogo } alt="TrybeTunes" />
         <p>Header</p>
         <section>
           <span
