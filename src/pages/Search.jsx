@@ -16,7 +16,8 @@ class Search extends Component {
       inputUser: '',
       loading: false,
       results: false,
-      NoneFind: '',
+      noneFind: '',
+      showTextResults: '',
     };
   }
 
@@ -27,33 +28,34 @@ class Search extends Component {
   }
 
   async loadingArtistAlbum(input) {
+    const { inputUser } = this.state;
     this.setState({
       loading: true,
     });
     const album = await searchAlbumsApi(input);
+
     if (album.length === 0) {
-      this.setState({
-        NoneFind: <h2 className="none_find">Nenhum álbum foi encontrado</h2>,
+      return this.setState({
         loading: false,
-        results: false,
-      });
-    } else {
-      this.setState({
-        NoneFind: '',
-        loading: false,
-        results: true,
+        noneFind: 'Nenhum álbum foi encontrado',
+        showTextResults: '',
+        album: [],
       });
     }
 
     this.setState({
+      loading: false,
       results: true,
+      noneFind: '',
       album,
+      showTextResults: `Resultado de álbuns de:
+      ${inputUser}`,
     });
   }
 
   render() {
     const onEnter = (event, callback) => event.key === 'Enter' && callback();
-    const { inputUser, album, loading, results, NoneFind } = this.state;
+    const { inputUser, album, loading, results, noneFind, showTextResults } = this.state;
     const minUserInputLength = 2;
     if (loading) {
       return <Loading />;
@@ -83,15 +85,12 @@ class Search extends Component {
             </button>
           </section>
         </div>
-        { NoneFind }
+        <h2 className="none_find">{ noneFind }</h2>
         {/* comparador binário: dica do Gustavo */}
         { loading && <Loading /> }
-        { results
-          ? <h2>
-            Resultado de álbuns de "
-            {inputUser}
-            "
-          </h2> : undefined }
+        <h2>
+          { showTextResults }
+        </h2>
         <ul className="slider">
           { results && album
             .map((eachAlbum, index) => <Results key={ index } data={ eachAlbum } />) }

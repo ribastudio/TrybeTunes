@@ -9,10 +9,6 @@ class Results extends Component {
       collectionName,
       artworkUrl100,
       collectionId } } = this.props;
-    // const { artistName,
-    //   collectionName,
-    //   artworkUrl100,
-    //   collectionId } = this.state;
     return (
       <li className="slider-li">
         <Link
