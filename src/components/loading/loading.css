@@ -1,0 +1,11 @@
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-text {
+  color: white;
+  width: 70%;
+  margin: auto 0;
+}

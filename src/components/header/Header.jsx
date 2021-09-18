@@ -34,20 +34,24 @@ class Header extends Component {
     const { userLogged, logged } = this.state;
     return (
       <header data-testid="header-component">
-        <img src={ TrybeLogo } alt="TrybeTunes" />
-        <p>Header</p>
-        <section>
-          <span
-            data-testid="header-user-name"
-          >
-            { logged ? userLogged : <Loading /> }
-          </span>
-        </section>
+        <Link to="/search">
+          <img className="header_img" src={ TrybeLogo } alt="TrybeTunes" />
+        </Link>
         <nav>
           <Link to="/search" data-testid="link-to-search">Search</Link>
           <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
           <Link to="/profile" data-testid="link-to-profile">Profiles</Link>
         </nav>
+        <section className="user_area">
+          <Link to="/profile">
+            <span
+              data-testid="header-user-name"
+              className="user_name"
+            >
+              { logged ? userLogged : <Loading /> }
+            </span>
+          </Link>
+        </section>
       </header>
     );
   }

@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.album_subtitle {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.slider-li {
+  background-color: rgba(10, 10, 10, 0.4);
+  list-style: none;
+  margin-right: 20px;
+}
+
+.slider-img {
+  margin: auto;
+  /* height: 100%; */
+  width: 200px;
+  vertical-align: top;
+}
+
+.slider-h2 {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.album_subtitle {
+  margin-left: 15px;
+}

@@ -1,16 +1,39 @@
 @import '../App.css';
 
-.search-body {
-  align-items: center;
+.search-box {
+  align-items: baseline;
   display: flex;
-  justify-content: center;
-  margin-top: 200px;
+  justify-content: space-between;
+  margin: auto;
+  width: 50%;
 }
 
-.search-body > h1 {
-  margin-right: 20px;
+.search-body {
+  align-items: baseline;
+  justify-content: space-between;  
+  margin-top: 200px;
 }
 
 button.search-btn {
   margin-left: 20px;
+}
+
+.slider {
+  display: flex;
+  width: 80%;
+  overflow: hidden;
+  padding: 20px;
+  margin: auto;
+  margin-top: 60px;
+  position: relative;
+}
+
+.gallery-container {
+  display: flex;
+}
+
+.none_find {
+  color: white;
+  margin-top: 50px;
+  text-align: center;
 }

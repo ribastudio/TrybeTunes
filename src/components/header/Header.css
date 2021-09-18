@@ -1,16 +1,25 @@
 @import '../../App.css' ;
 
 header {
-  background-color: rgb(80, 80, 80);
-  display: block;
+  background-color: rgb(37, 37, 37);
+  display: flex;
+  justify-content: space-around;
   height: 60px;
   width: 100vw;
 }
 
+header > a {
+  display: flex;
+}
+
+span {
+  color: white;
+}
+
 nav {
-  background-color: rgba(161, 11, 11, 0.644);
-  display: block;
-  height: 70%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 nav > a {
@@ -25,7 +34,7 @@ nav > a:hover {
 }
 
 .search-btn {
-  background-color: rgb(155, 81, 224);
+  background-color: rgb(82, 0, 160);
   border: none;
   border-radius: 5px;
   color: white;
@@ -35,7 +44,7 @@ nav > a:hover {
 }
 
 .search-btn:hover {
-  background-color: rgb(191, 122, 255);
+  background-color: rgb(95, 49, 139);
   cursor: pointer;
 }
 
@@ -43,4 +52,30 @@ nav > a:hover {
   background-color: rgb(54, 41, 59);
   color: rgb(64, 57, 68);
   cursor: pointer;
+}
+
+.header_img {
+  width: 90px;
+}
+
+.user_area {
+  align-items: center;
+  background-color: rgba(24, 24, 24, 0.5);
+  border-radius: 10px;
+  display: flex;
+  height: 70%;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.user_name {
+  color: rgb(149, 149, 149);
+  margin-left: 25px;
+  margin-right: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_name:hover {
+  color: rgb(172, 228, 19);
 }

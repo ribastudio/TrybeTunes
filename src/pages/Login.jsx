@@ -41,7 +41,7 @@ class Login extends Component {
 
   render() {
     const { inputUser, loading, logged } = this.state;
-
+    const onEnter = (event, callback) => event.key === 'Enter' && callback();
     if (loading) {
       return <Loading />;
     }
@@ -52,33 +52,37 @@ class Login extends Component {
 
     const minUserInputLength = 3;
     return (
-      <section className="section" data-testid="page-login">
-        <div>
-          <img src={ TrybeLogo } alt="TrybeTunes" />
-        </div>
-        <div className="login_box">
-          <h1 className="login_title">Insira seu usuário</h1>
-          <label htmlFor="input-login">
-            <input
-              name="input-login"
-              data-testid="login-name-input"
-              onChange={ this.handleChange }
-              status={ loading }
-            />
-            Insira seu nome
-          </label>
-          <button
-            className="enter-btn"
-            type="button"
-            data-testid="login-submit-button"
-            // Dica durante room com o Diogo Fiuza
-            disabled={ inputUser.length < minUserInputLength }
-            onClick={ () => this.createNewUser(inputUser) }
-          >
-            Entrar
-          </button>
-        </div>
-      </section>
+      <div>
+        <section className="section" data-testid="page-login">
+          <div className="column-img">
+            <img src={ TrybeLogo } alt="TrybeTunes" />
+          </div>
+          <div className="login_box">
+            <div className="login_inside">
+              <input
+                name="input-login"
+                data-testid="login-name-input"
+                onChange={ this.handleChange }
+                /*  Esta função utiliza o 'enter' para usar o input https://qastack.com.br/programming/31272207/to-call-onchange-event-after-pressing-enter-key */
+                onKeyPress={ inputUser.length < minUserInputLength
+                  ? null : (e) => onEnter(e, () => this.createNewUser(inputUser)) }
+                status={ loading }
+                placeholder="Insira seu nome"
+              />
+              <button
+                className="enter-btn"
+                type="button"
+                data-testid="login-submit-button"
+                // Dica durante room com o Diogo Fiuza
+                disabled={ inputUser.length < minUserInputLength }
+                onClick={ () => this.createNewUser(inputUser) }
+              >
+                Entrar
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
     );
   }
 }
