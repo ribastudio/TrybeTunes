@@ -48,8 +48,8 @@ class Search extends Component {
       results: true,
       noneFind: '',
       album,
-      showTextResults: `Resultado de álbuns de "
-      ${inputUser}"`,
+      showTextResults: `Resultado de álbuns de: 
+      ${inputUser}`,
     });
   }
 

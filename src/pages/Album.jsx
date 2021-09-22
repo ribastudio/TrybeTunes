@@ -40,7 +40,7 @@ class Album extends Component {
     return (
       <>
         <Header />
-        <section>
+        <section data-testid="page-album">
           <img src={ musicList[0].artworkUrl100 } alt="Capa do álbum" />
           <h2 data-testid="album-name">{ musicList[0].collectionName }</h2>
           <h3 data-testid="artist-name">{musicList[0].artistName}</h3>
