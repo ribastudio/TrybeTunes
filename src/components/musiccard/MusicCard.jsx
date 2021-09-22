@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MusicCard extends Component {
   render() {
-    const { data: { artistName, trackName, collectionName, previewUrl } } = this.props;
+    const { data: { trackName, trackId, previewUrl } } = this.props;
     return (
       <div>
-        <h2 data-testid="artist-name">{ artistName }</h2>
-        <h2 data-testid="album-name">{ collectionName }</h2>
+        { trackId }
+        <h3>{ trackName }</h3>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
@@ -20,3 +21,11 @@ class MusicCard extends Component {
 }
 
 export default MusicCard;
+
+MusicCard.propTypes = {
+  data: PropTypes.shape({
+    trackId: PropTypes.number,
+    trackName: PropTypes.string,
+    previewUrl: PropTypes.string,
+  }).isRequired,
+};

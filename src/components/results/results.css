@@ -10,14 +10,19 @@ a {
 
 .slider-li {
   background-color: rgba(10, 10, 10, 0.4);
+  height: 300px;
   list-style: none;
   margin-right: 20px;
+  /* transition: transform 1s ease-in-out; */
+}
+
+.slider-li:hover {
+  transform: translateY(-20px);
 }
 
 .slider-img {
   margin: auto;
-  /* height: 100%; */
-  width: 200px;
+  max-width: 200px;
   vertical-align: top;
 }
 

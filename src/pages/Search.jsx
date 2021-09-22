@@ -48,8 +48,8 @@ class Search extends Component {
       results: true,
       noneFind: '',
       album,
-      showTextResults: `Resultado de álbuns de:
-      ${inputUser}`,
+      showTextResults: `Resultado de álbuns de "
+      ${inputUser}"`,
     });
   }
 
@@ -88,7 +88,7 @@ class Search extends Component {
         <h2 className="none_find">{ noneFind }</h2>
         {/* comparador binário: dica do Gustavo */}
         { loading && <Loading /> }
-        <h2>
+        <h2 className="none_find">
           { showTextResults }
         </h2>
         <ul className="slider">

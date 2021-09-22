@@ -18,7 +18,7 @@ const Routes = () => (
       <Header />
       <Search />
     </Route>
-    <Route path="/album/:id" component={ Header, Album } />
+    <Route path="/album/:id" component={ Album } />
     <Route path="/favorites">
       <Header />
       <Favorites />

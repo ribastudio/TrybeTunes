@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './results.css';
 
 class Results extends Component {
   render() {
-    const { data: { 
+    const { data: {
       artistName,
       collectionName,
       artworkUrl100,
@@ -25,3 +26,12 @@ class Results extends Component {
 }
 
 export default Results;
+
+Results.propTypes = {
+  data: PropTypes.shape({
+    artistName: PropTypes.string,
+    trackName: PropTypes.string,
+    collectionName: PropTypes.string,
+    previewUrl: PropTypes.string,
+  }).isRequired,
+};
