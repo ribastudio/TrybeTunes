@@ -22,9 +22,7 @@ class Album extends Component {
   async fillMusicList() {
     const { match: { params: { id } } } = this.props;
     // this.setState({ loading: true });
-    console.log(id);
     const music = await getMusics(id);
-    console.log('music aqui', music);
     this.setState({
       musicList: music,
       loading: false,
@@ -33,17 +31,32 @@ class Album extends Component {
 
   render() {
     const { musicList, loading } = this.state;
-    console.log(musicList);
     if (loading) {
       return <Loading />;
     }
     return (
       <>
         <Header />
-        <section data-testid="page-album">
-          <img src={ musicList[0].artworkUrl100 } alt="Capa do álbum" />
-          <h2 data-testid="album-name">{ musicList[0].collectionName }</h2>
-          <h3 data-testid="artist-name">{musicList[0].artistName}</h3>
+        <section className="album-container" data-testid="page-album">
+          <div className="artist-container">
+            <img
+              className="album-cover"
+              src={ musicList[0].artworkUrl100 }
+              alt={ musicList[0].collectionName }
+            />
+            <h2
+              className="album-title"
+              data-testid="album-name"
+            >
+              { musicList[0].collectionName }
+            </h2>
+            <h3
+              className="album-subtitle"
+              data-testid="artist-name"
+            >
+              { musicList[0].artistName }
+            </h3>
+          </div>
           <div>
             {/* Dica do Matheus Henrique durante call, depois pegar esta dica do Pessini no Slack */}
             { musicList.slice(1)

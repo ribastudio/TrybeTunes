@@ -1,31 +1,31 @@
-/* audio::-webkit-media-controls-panel {
-  background-color: black;
+.album-container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 15px;
 }
 
-audio::-webkit-media-controls-mute-button
+.artist-container {
+  color: rgb(136, 136, 136);
+}
 
-audio::-webkit-media-controls-play-button
+.music-card {
+  display: flex;
+  flex-direction: column;
+}
 
-audio::-webkit-media-controls-timeline-container
+.album-cover {
+  margin-bottom: 20px;
+  min-width: 250px;
+}
 
-audio::-webkit-media-controls-current-time-display
+.album-title {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
 
-audio::-webkit-media-controls-time-remaining-display
-
-audio::-webkit-media-controls-timeline
-
-audio::-webkit-media-controls-volume-slider-container
-
-audio::-webkit-media-controls-volume-slider
-
-audio::-webkit-media-controls-seek-back-button
-
-audio::-webkit-media-controls-seek-forward-button
-
-audio::-webkit-media-controls-fullscreen-button
-
-audio::-webkit-media-controls-rewind-button
-
-audio::-webkit-media-controls-return-to-realtime-button
-
-audio::-webkit-media-controls-toggle-closed-captions-button */
+.album-subtitle {
+  font-size: 1.4em;
+  font-weight: 300;
+  letter-spacing: 1.5pt;
+}
