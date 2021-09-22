@@ -33,5 +33,7 @@ Results.propTypes = {
     trackName: PropTypes.string,
     collectionName: PropTypes.string,
     previewUrl: PropTypes.string,
+    artworkUrl100: PropTypes.string,
+    collectionId: PropTypes.number,
   }).isRequired,
 };

@@ -3,8 +3,8 @@
 header {
   background-color: rgb(37, 37, 37);
   display: flex;
-  justify-content: space-around;
   height: 60px;
+  justify-content: space-around;
   width: 100vw;
 }
 
@@ -18,8 +18,8 @@ span {
 
 nav {
   align-items: center;
-  justify-content: center;
   display: flex;
+  justify-content: center;
 }
 
 nav > a {
@@ -69,11 +69,11 @@ nav > a:hover {
 }
 
 .user_name {
+  align-items: center;
   color: rgb(149, 149, 149);
+  justify-content: center;
   margin-left: 25px;
   margin-right: 25px;
-  align-items: center;
-  justify-content: center;
 }
 
 .user_name:hover {

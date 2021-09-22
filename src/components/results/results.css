@@ -1,11 +1,12 @@
 a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 .album_subtitle {
   font-size: 18px;
   font-weight: 300;
+  margin-left: 15px;
 }
 
 .slider-li {
@@ -13,7 +14,6 @@ a {
   height: 300px;
   list-style: none;
   margin-right: 20px;
-  /* transition: transform 1s ease-in-out; */
 }
 
 .slider-li:hover {
@@ -27,11 +27,7 @@ a {
 }
 
 .slider-h2 {
-  margin-top: 20px;
-  margin-left: 15px;
   font-size: 20px;
-}
-
-.album_subtitle {
   margin-left: 15px;
+  margin-top: 20px;
 }

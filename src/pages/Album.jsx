@@ -24,7 +24,7 @@ class Album extends Component {
     // this.setState({ loading: true });
     console.log(id);
     const music = await getMusics(id);
-    console.log("music aqui", music);
+    console.log('music aqui', music);
     this.setState({
       musicList: music,
       loading: false,
